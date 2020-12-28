@@ -13,15 +13,36 @@
 def maxSubArray(nums: List[int]) -> int:
 
     # If the list is empty, return 0?
+    if nums == []:
+        return 0
     # If the list contains one value only, return that value.
+    if len(nums) == 1:
+        return nums[0]
 
     # Initialize a sum with value 0.
+    max_sum = 0
     # Look at sliding windows of various lengths across the list?
     # Start with a window of length 1, go until window of length n.
-    # Slide across nums and slice the list accordingly, calculating sums across each window.
-    # If the value of the sum is greater than sum, then replace sum.
+    window_size = 1
+    # Slide across nums and slice the list accordingly, calculating sums across each window....
+    # Increment window size from 1 to n.
+    for window_size in range(1, len(nums)+1)
+        # Start with idx1 = 0 and idx2 = window_size, then calculate the sum of nums[idx1:idx2]
+        idx1 = 0
+        idx2 = idx1 + window_size
+        # keep going until idx2 = len(nums) + 1
+        while idx2 < len(nums)+1:
+            # Calculate the sum of nums in this window each time.
+            # If the value of the sum is greater than sum, then replace sum.
+            if sum(nums[idx1:idx2]) > max_sum:
+                max_sum = sum(nums[idx1:idx2])
+            # increment both idx1 and idx2 by 1 and calculate the sum again.
+            idx1 += 1
+            idx2 += 1
+        
     # Return the value of sum.
-    # I think this is more like an O(n) runtime, but there's a better way than this!
+    return max_sum
+    
 
     # Initialize a sum with value 0.
     # Start at first item in the list.
