@@ -28,5 +28,5 @@ def uniqueMorseRepresentations(words: List[str]) -> int:
         # At the end of each word, add the string to the set.
         unique_words.add(translated_word)
     # Finally, return the length of the set.
-    return length(unique_words)
+    return len(unique_words)
 
