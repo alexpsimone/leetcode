@@ -20,13 +20,13 @@ def maxSubArray(nums: List[int]) -> int:
         return nums[0]
 
     # Initialize a sum with value 0.
-    max_sum = 0
+    max_sum = nums[0]
     # Look at sliding windows of various lengths across the list?
     # Start with a window of length 1, go until window of length n.
     window_size = 1
     # Slide across nums and slice the list accordingly, calculating sums across each window....
     # Increment window size from 1 to n.
-    for window_size in range(1, len(nums)+1)
+    for window_size in range(1, len(nums)+1):
         # Start with idx1 = 0 and idx2 = window_size, then calculate the sum of nums[idx1:idx2]
         idx1 = 0
         idx2 = idx1 + window_size
@@ -42,7 +42,7 @@ def maxSubArray(nums: List[int]) -> int:
         
     # Return the value of sum.
     return max_sum
-    
+
 
     # Initialize a sum with value 0.
     # Start at first item in the list.
