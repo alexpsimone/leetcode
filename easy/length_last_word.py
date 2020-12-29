@@ -1,0 +1,1 @@
+def lengthOfLastWord(s: str) -> int:
