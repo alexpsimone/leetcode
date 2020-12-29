@@ -14,7 +14,7 @@ def findNumbers(nums: List[int]) -> int:
     for num in nums:
     # find len(str(num)) % 2
         if len(str(num)) % 2 == 0:
-        # if this is zero, then increment a counter
-        even_digit_nums += 1
+            # if this is zero, then increment a counter
+            even_digit_nums += 1
     # at the end, return the counter value
     return even_digit_nums
