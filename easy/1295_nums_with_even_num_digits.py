@@ -5,5 +5,16 @@
 
 # is list ordered?
     # if so, and first/last digits have same num digits, then we know how many digits the rest have
-     
+
 def findNumbers(nums: List[int]) -> int:
+
+    # initialize a counter at zero
+    even_digit_nums = 0
+    # loop through each number in the list nums
+    for num in nums:
+    # find len(str(num)) % 2
+        if len(str(num)) % 2 == 0:
+        # if this is zero, then increment a counter
+        even_digit_nums += 1
+    # at the end, return the counter value
+    return even_digit_nums
